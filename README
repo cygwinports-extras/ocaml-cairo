@@ -1,0 +1,96 @@
+ocaml-cairo
+------------------------------------------
+Objective Caml cairo bindings
+
+Runtime requirements:
+  cairo-1.0.4-1
+  lablgtk2-2.6.0-1
+  libsvg-cairo-0.1.6-1
+  ocaml-3.08.1-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.18-1
+  autoconf2.5-2.59-3
+  automake1.9-1.9.6-1
+  binutils-20050610-1
+  cygport-0.1.93-1
+  gawk-3.1.5-2
+  gcc-core-3.4.4-1
+  make-3.80-1
+  sed-4.1.4-1
+
+Canonical website:
+  http://cairographics.org/cairo-ocaml
+
+-------------------------------------------
+
+Build instructions:
+  unpack ocaml-cairo-20060210-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./ocaml-cairo-20060210-X.cygport all
+
+This will create:
+  /usr/src/ocaml-cairo-20060210-X-src.tar.bz2
+  /usr/src/ocaml-cairo-20060210-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/lib/ocaml/cairo/cairo.a
+  /usr/lib/ocaml/cairo/cairo.cma
+  /usr/lib/ocaml/cairo/cairo.cmi
+  /usr/lib/ocaml/cairo/cairo.cmx
+  /usr/lib/ocaml/cairo/cairo.cmxa
+  /usr/lib/ocaml/cairo/cairo.mli
+  /usr/lib/ocaml/cairo/cairo_bigarray.cmi
+  /usr/lib/ocaml/cairo/cairo_bigarray.cmx
+  /usr/lib/ocaml/cairo/cairo_bigarray.mli
+  /usr/lib/ocaml/cairo/cairo_ft.cmi
+  /usr/lib/ocaml/cairo/cairo_ft.cmx
+  /usr/lib/ocaml/cairo/cairo_ft.mli
+  /usr/lib/ocaml/cairo/cairo_lablgtk.a
+  /usr/lib/ocaml/cairo/cairo_lablgtk.cma
+  /usr/lib/ocaml/cairo/cairo_lablgtk.cmi
+  /usr/lib/ocaml/cairo/cairo_lablgtk.cmx
+  /usr/lib/ocaml/cairo/cairo_lablgtk.cmxa
+  /usr/lib/ocaml/cairo/cairo_lablgtk.mli
+  /usr/lib/ocaml/cairo/cairo_pdf.cmi
+  /usr/lib/ocaml/cairo/cairo_pdf.cmx
+  /usr/lib/ocaml/cairo/cairo_pdf.mli
+  /usr/lib/ocaml/cairo/cairo_png.cmi
+  /usr/lib/ocaml/cairo/cairo_png.cmx
+  /usr/lib/ocaml/cairo/cairo_png.mli
+  /usr/lib/ocaml/cairo/cairo_ps.cmi
+  /usr/lib/ocaml/cairo/cairo_ps.cmx
+  /usr/lib/ocaml/cairo/cairo_ps.mli
+  /usr/lib/ocaml/cairo/cairo_svg.cmi
+  /usr/lib/ocaml/cairo/cairo_svg.cmx
+  /usr/lib/ocaml/cairo/cairo_svg.mli
+  /usr/lib/ocaml/cairo/libmlcairo.a
+  /usr/lib/ocaml/cairo/libmlcairo_lablgtk.a
+  /usr/lib/ocaml/cairo/libmlsvgcairo.a
+  /usr/lib/ocaml/cairo/svg_cairo.a
+  /usr/lib/ocaml/cairo/svg_cairo.cma
+  /usr/lib/ocaml/cairo/svg_cairo.cmi
+  /usr/lib/ocaml/cairo/svg_cairo.cmx
+  /usr/lib/ocaml/cairo/svg_cairo.cmxa
+  /usr/lib/ocaml/cairo/svg_cairo.mli
+  /usr/share/doc/Cygwin/ocaml-cairo-20060210.README
+  /usr/share/doc/ocaml-cairo-20060210/COPYING
+  /usr/share/doc/ocaml-cairo-20060210/ChangeLog
+  /usr/share/doc/ocaml-cairo-20060210/README
+
+------------------
+
+Port Notes:
+
+----- version 20060210-1 -----
+Initial release for Cygwin, from current CVS snapshot.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

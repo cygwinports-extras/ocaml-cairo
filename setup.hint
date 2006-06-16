@@ -1,0 +1,4 @@
+category: Interpreters Graphics
+requires: cygwin lablgtk2 ocaml
+sdesc: "Objective Caml cairo bindings"
+ldesc: "Objective Caml cairo bindings"
