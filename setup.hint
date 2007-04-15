@@ -1,4 +1,4 @@
-category: Interpreters Graphics
-requires: cygwin lablgtk2 ocaml
+category: Interpreters X11
+requires: cygwin lablgtk2 libcairo2 libcairo-devel ocaml
 sdesc: "Objective Caml cairo bindings"
 ldesc: "Objective Caml cairo bindings"

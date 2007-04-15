@@ -3,22 +3,22 @@ ocaml-cairo
 Objective Caml cairo bindings
 
 Runtime requirements:
-  cairo-1.0.4-1
   lablgtk2-2.6.0-1
-  libsvg-cairo-0.1.6-1
+  libcairo2-1.4.4-1
   ocaml-3.08.1-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.18-1
-  autoconf2.5-2.59-3
-  automake1.9-1.9.6-1
-  binutils-20050610-1
-  cygport-0.1.93-1
-  gawk-3.1.5-2
-  gcc-core-3.4.4-1
-  make-3.80-1
-  sed-4.1.4-1
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.10-1.10-1
+  binutils-20060817-1
+  cygport-0.2.11-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-4
 
 Canonical website:
   http://cairographics.org/cairo-ocaml
@@ -26,15 +26,15 @@ Canonical website:
 -------------------------------------------
 
 Build instructions:
-  unpack ocaml-cairo-20060210-X-src.tar.bz2
+  unpack ocaml-cairo-20061109-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./ocaml-cairo-20060210-X.cygport all
+  cygport ./ocaml-cairo-20061109-X.cygport all
 
 This will create:
-  /usr/src/ocaml-cairo-20060210-X-src.tar.bz2
-  /usr/src/ocaml-cairo-20060210-X.tar.bz2
+  /usr/src/ocaml-cairo-20061109-X-src.tar.bz2
+  /usr/src/ocaml-cairo-20061109-X.tar.bz2
 
 -------------------------------------------
 
@@ -72,21 +72,18 @@ Files included in the binary package:
   /usr/lib/ocaml/cairo/cairo_svg.mli
   /usr/lib/ocaml/cairo/libmlcairo.a
   /usr/lib/ocaml/cairo/libmlcairo_lablgtk.a
-  /usr/lib/ocaml/cairo/libmlsvgcairo.a
-  /usr/lib/ocaml/cairo/svg_cairo.a
-  /usr/lib/ocaml/cairo/svg_cairo.cma
-  /usr/lib/ocaml/cairo/svg_cairo.cmi
-  /usr/lib/ocaml/cairo/svg_cairo.cmx
-  /usr/lib/ocaml/cairo/svg_cairo.cmxa
   /usr/lib/ocaml/cairo/svg_cairo.mli
-  /usr/share/doc/Cygwin/ocaml-cairo-20060210.README
-  /usr/share/doc/ocaml-cairo-20060210/COPYING
-  /usr/share/doc/ocaml-cairo-20060210/ChangeLog
-  /usr/share/doc/ocaml-cairo-20060210/README
+  /usr/share/doc/Cygwin/ocaml-cairo-20061109.README
+  /usr/share/doc/ocaml-cairo-20061109/COPYING
+  /usr/share/doc/ocaml-cairo-20061109/ChangeLog
+  /usr/share/doc/ocaml-cairo-20061109/README
 
 ------------------
 
 Port Notes:
+
+----- version 20061109-1 -----
+Updated CVS snapshot for cairo-1.2.
 
 ----- version 20060210-1 -----
 Initial release for Cygwin, from current CVS snapshot.
