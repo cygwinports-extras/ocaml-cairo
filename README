@@ -3,9 +3,15 @@ ocaml-cairo
 Objective Caml cairo bindings
 
 Runtime requirements:
-  lablgtk2-2.6.0-1
-  libcairo2-1.4.4-1
-  ocaml-3.08.1-1
+  cygwin-1.5.24-2
+  gdk-pixbuf2-2.10.9-1
+  glib2-2.12.9-1
+  gtk2-x11-2.10.9-1
+  lablgtk2-20060908-1
+  libcairo2-1.2.6-1
+  libfontconfig1-2.3.2-2
+  libfreetype26-2.2.1-1
+  ocaml-3.09.3-1
 
 Build requirements:
 (besides corresponding -devel packages)
@@ -70,17 +76,57 @@ Files included in the binary package:
   /usr/lib/ocaml/cairo/cairo_svg.cmi
   /usr/lib/ocaml/cairo/cairo_svg.cmx
   /usr/lib/ocaml/cairo/cairo_svg.mli
+  /usr/lib/ocaml/cairo/dllmlcairo.so
+  /usr/lib/ocaml/cairo/dllmlcairo_lablgtk.so
   /usr/lib/ocaml/cairo/libmlcairo.a
   /usr/lib/ocaml/cairo/libmlcairo_lablgtk.a
   /usr/lib/ocaml/cairo/svg_cairo.mli
+  /usr/lib/ocaml/stublibs/dllmlcairo.so
+  /usr/lib/ocaml/stublibs/dllmlcairo_lablgtk.so
   /usr/share/doc/Cygwin/ocaml-cairo-20061109.README
   /usr/share/doc/ocaml-cairo-20061109/COPYING
   /usr/share/doc/ocaml-cairo-20061109/ChangeLog
   /usr/share/doc/ocaml-cairo-20061109/README
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Font_Options.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Matrix.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Pattern.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Scaled_Font.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_bigarray.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_ft.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_lablgtk.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_pdf.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_png.html
+  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_ps.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_attributes.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_class_types.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_classes.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_exceptions.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_methods.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_module_types.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_modules.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_types.html
+  /usr/share/doc/ocaml-cairo-20061109/html/index_values.html
+  /usr/share/doc/ocaml-cairo-20061109/html/style.css
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Font_Options.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Matrix.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Pattern.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Scaled_Font.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_bigarray.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_ft.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_lablgtk.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_pdf.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_png.html
+  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_ps.html
 
 ------------------
 
 Port Notes:
+
+----- version 20061109-2 -----
+Rebuilt for cairo-3.09 with dynamic plugins.
 
 ----- version 20061109-1 -----
 Updated CVS snapshot for cairo-1.2.

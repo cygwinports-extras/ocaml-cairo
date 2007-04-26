@@ -1,4 +1,4 @@
 category: Interpreters X11
-requires: cygwin lablgtk2 libcairo2 libcairo-devel ocaml
+requires: cygwin gtk2-x11 lablgtk2 libcairo2 libfreetype26 libfontconfig1 ocaml
 sdesc: "Objective Caml cairo bindings"
 ldesc: "Objective Caml cairo bindings"
