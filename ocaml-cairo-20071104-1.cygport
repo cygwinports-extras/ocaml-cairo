@@ -1,0 +1,19 @@
+CVS_URI=":pserver:anoncvs@cvs.freedesktop.org:/cvs/cairo"
+CVS_DATE=$((PV + 1))
+CVS_MODULE="cairo-ocaml"
+
+inherit cvs ocaml
+
+DESCRIPTION="OCaml bindings for cairo and libsvg-cairo"
+HOMEPAGE="http://cairographics.org/cairo-ocaml"
+
+src_compile() {
+	cd ${S}
+	aclocal -I support || error
+	autoconf -f || error
+	lndirs
+
+	cd ${B}
+	cygconf --with-gtk
+	cygmake -j1
+}

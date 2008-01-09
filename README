@@ -3,23 +3,24 @@ ocaml-cairo
 Objective Caml cairo bindings
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  gdk-pixbuf2-2.10.9-1
-  glib2-2.12.9-1
-  gtk2-x11-2.10.9-1
-  lablgtk2-20060908-1
-  libcairo2-1.2.6-1
+  cygwin-1.5.25-7
+  gdk-pixbuf2-2.12.3-1
+  glib2-2.14.4-1
+  gtk2-x11-2.12.3-1
+  libcairo2-1.4.12-1
   libfontconfig1-2.3.2-2
-  libfreetype26-2.2.1-1
-  ocaml-3.09.3-1
+  libfreetype26-2.3.5-1
+  libsvg-cairo1-20050814-1
+  ocaml-3.10.0-1
+  ocaml-lablgtk2-2.10.0-1
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   autoconf2.5-2.61-1
   automake1.10-1.10-1
   binutils-20060817-1
-  cygport-0.2.11-1
+  cygport-0.3.8-1
   gawk-3.1.5-4
   gcc-core-3.4.4-3
   make-3.81-1
@@ -29,104 +30,84 @@ Build requirements:
 Canonical website:
   http://cairographics.org/cairo-ocaml
 
+Canonical download:
+  CVS
+
 -------------------------------------------
 
 Build instructions:
-  unpack ocaml-cairo-20061109-X-src.tar.bz2
+  unpack ocaml-cairo-20071104-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./ocaml-cairo-20061109-X.cygport all
+  cygport ./ocaml-cairo-20071104-X.cygport all
 
 This will create:
-  /usr/src/ocaml-cairo-20061109-X-src.tar.bz2
-  /usr/src/ocaml-cairo-20061109-X.tar.bz2
+  /usr/src/ocaml-cairo-20071104-X-src.tar.bz2
+  /usr/src/ocaml-cairo-20071104-X.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary package:
 
-  /usr/lib/ocaml/cairo/cairo.a
-  /usr/lib/ocaml/cairo/cairo.cma
-  /usr/lib/ocaml/cairo/cairo.cmi
-  /usr/lib/ocaml/cairo/cairo.cmx
-  /usr/lib/ocaml/cairo/cairo.cmxa
-  /usr/lib/ocaml/cairo/cairo.mli
-  /usr/lib/ocaml/cairo/cairo_bigarray.cmi
-  /usr/lib/ocaml/cairo/cairo_bigarray.cmx
-  /usr/lib/ocaml/cairo/cairo_bigarray.mli
-  /usr/lib/ocaml/cairo/cairo_ft.cmi
-  /usr/lib/ocaml/cairo/cairo_ft.cmx
-  /usr/lib/ocaml/cairo/cairo_ft.mli
-  /usr/lib/ocaml/cairo/cairo_lablgtk.a
-  /usr/lib/ocaml/cairo/cairo_lablgtk.cma
-  /usr/lib/ocaml/cairo/cairo_lablgtk.cmi
-  /usr/lib/ocaml/cairo/cairo_lablgtk.cmx
-  /usr/lib/ocaml/cairo/cairo_lablgtk.cmxa
-  /usr/lib/ocaml/cairo/cairo_lablgtk.mli
-  /usr/lib/ocaml/cairo/cairo_pdf.cmi
-  /usr/lib/ocaml/cairo/cairo_pdf.cmx
-  /usr/lib/ocaml/cairo/cairo_pdf.mli
-  /usr/lib/ocaml/cairo/cairo_png.cmi
-  /usr/lib/ocaml/cairo/cairo_png.cmx
-  /usr/lib/ocaml/cairo/cairo_png.mli
-  /usr/lib/ocaml/cairo/cairo_ps.cmi
-  /usr/lib/ocaml/cairo/cairo_ps.cmx
-  /usr/lib/ocaml/cairo/cairo_ps.mli
-  /usr/lib/ocaml/cairo/cairo_svg.cmi
-  /usr/lib/ocaml/cairo/cairo_svg.cmx
-  /usr/lib/ocaml/cairo/cairo_svg.mli
-  /usr/lib/ocaml/cairo/dllmlcairo.so
-  /usr/lib/ocaml/cairo/dllmlcairo_lablgtk.so
-  /usr/lib/ocaml/cairo/libmlcairo.a
-  /usr/lib/ocaml/cairo/libmlcairo_lablgtk.a
-  /usr/lib/ocaml/cairo/svg_cairo.mli
-  /usr/lib/ocaml/stublibs/dllmlcairo.so
-  /usr/lib/ocaml/stublibs/dllmlcairo_lablgtk.so
-  /usr/share/doc/Cygwin/ocaml-cairo-20061109.README
-  /usr/share/doc/ocaml-cairo-20061109/COPYING
-  /usr/share/doc/ocaml-cairo-20061109/ChangeLog
-  /usr/share/doc/ocaml-cairo-20061109/README
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Font_Options.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Matrix.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Pattern.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.Scaled_Font.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_bigarray.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_ft.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_lablgtk.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_pdf.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_png.html
-  /usr/share/doc/ocaml-cairo-20061109/html/Cairo_ps.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_attributes.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_class_types.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_classes.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_exceptions.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_methods.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_module_types.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_modules.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_types.html
-  /usr/share/doc/ocaml-cairo-20061109/html/index_values.html
-  /usr/share/doc/ocaml-cairo-20061109/html/style.css
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Font_Options.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Matrix.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Pattern.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.Scaled_Font.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_bigarray.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_ft.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_lablgtk.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_pdf.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_png.html
-  /usr/share/doc/ocaml-cairo-20061109/html/type_Cairo_ps.html
+  /usr/lib/ocaml/3.10/cairo/cairo.a
+  /usr/lib/ocaml/3.10/cairo/cairo.cma
+  /usr/lib/ocaml/3.10/cairo/cairo.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo.cmxa
+  /usr/lib/ocaml/3.10/cairo/cairo.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_bigarray.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_bigarray.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_bigarray.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_ft.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_ft.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_ft.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.a
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.cma
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.cmxa
+  /usr/lib/ocaml/3.10/cairo/cairo_lablgtk.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_pdf.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_pdf.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_pdf.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_png.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_png.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_png.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_ps.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_ps.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_ps.mli
+  /usr/lib/ocaml/3.10/cairo/cairo_svg.cmi
+  /usr/lib/ocaml/3.10/cairo/cairo_svg.cmx
+  /usr/lib/ocaml/3.10/cairo/cairo_svg.mli
+  /usr/lib/ocaml/3.10/cairo/dllmlcairo.so
+  /usr/lib/ocaml/3.10/cairo/dllmlcairo_lablgtk.so
+  /usr/lib/ocaml/3.10/cairo/dllmlsvgcairo.so
+  /usr/lib/ocaml/3.10/cairo/libmlcairo.a
+  /usr/lib/ocaml/3.10/cairo/libmlcairo_lablgtk.a
+  /usr/lib/ocaml/3.10/cairo/libmlsvgcairo.a
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.a
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.cma
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.cmi
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.cmx
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.cmxa
+  /usr/lib/ocaml/3.10/cairo/svg_cairo.mli
+  /usr/lib/ocaml/3.10/stublibs/dllmlcairo.so
+  /usr/lib/ocaml/3.10/stublibs/dllmlcairo_lablgtk.so
+  /usr/lib/ocaml/3.10/stublibs/dllmlsvgcairo.so
+  /usr/share/doc/ocaml-cairo-20071104/COPYING
+  /usr/share/doc/ocaml-cairo-20071104/ChangeLog
+  /usr/share/doc/ocaml-cairo-20071104/README
 
 ------------------
 
 Port Notes:
 
+----- version 20071104-1 -----
+Version bump, built for OCaml 3.10.
+
 ----- version 20061109-2 -----
-Rebuilt for cairo-3.09 with dynamic plugins.
+Rebuilt for OCaml 3.09 with dynamic plugins.
 
 ----- version 20061109-1 -----
 Updated CVS snapshot for cairo-1.2.
