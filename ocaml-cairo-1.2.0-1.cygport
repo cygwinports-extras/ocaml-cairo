@@ -1,11 +1,10 @@
-CVS_URI=":pserver:anoncvs@cvs.freedesktop.org:/cvs/cairo"
-CVS_DATE=$((PV + 1))
-CVS_MODULE="cairo-ocaml"
-
-inherit cvs ocaml
+GIT_URI="git://anongit.freedesktop.org/cairo-ocaml"
+inherit git ocaml
 
 DESCRIPTION="OCaml bindings for cairo and libsvg-cairo"
 HOMEPAGE="http://cairographics.org/cairo-ocaml"
+
+DIFF_EXCLUDES="aclocal.m4 configure"
 
 src_compile() {
 	cd ${S}
