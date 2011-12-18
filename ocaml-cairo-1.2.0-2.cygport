@@ -1,8 +1,9 @@
-GIT_URI="git://anongit.freedesktop.org/cairo-ocaml"
-inherit git ocaml
+inherit ocaml
 
 DESCRIPTION="OCaml bindings for cairo and libsvg-cairo"
 HOMEPAGE="http://cairographics.org/cairo-ocaml"
+SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-${PV}.tar.bz2"
+SRC_DIR="cairo-ocaml-${PV}"
 
 DIFF_EXCLUDES="aclocal.m4 configure"
 

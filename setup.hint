@@ -1,4 +1,4 @@
 category: OCaml X11
-requires: libcairo-devel libfontconfig-devel libfreetype-devel libglib2.0-devel libpango1.0-devel ocaml ocaml-lablgtk2
+requires: libcairo2 libcairo-devel libfontconfig1 libfontconfig-devel libfreetype6 libfreetype-devel libglib2.0_0 libglib2.0-devel libpango1.0_0 libpango1.0-devel ocaml ocaml-lablgtk2
 sdesc: "OCaml bindings for libcairo"
 ldesc: "Objective Caml cairo bindings"
