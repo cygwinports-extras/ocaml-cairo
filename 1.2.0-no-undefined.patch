@@ -1,0 +1,26 @@
+--- origsrc/cairo-ocaml-1.2.0/src/Makefile	2010-04-11 16:17:32.000000000 -0500
++++ src/cairo-ocaml-1.2.0/src/Makefile	2012-07-11 19:22:55.760217900 -0500
+@@ -51,11 +51,11 @@ libmlcairo.a dllmlcairo.so : $(call cobj
+ lablgtk_SRC = cairo_lablgtk.mli cairo_lablgtk.ml ml_cairo_lablgtk.c
+ 
+ cairo_lablgtk.cma : $(call mlobjs,$(lablgtk_SRC))
+-	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^
++	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^ $(GDK_LIBS)
+ cairo_lablgtk.cmxa : $(call mloptobjs,$(lablgtk_SRC))
+-	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^
++	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^ $(GDK_LIBS)
+ libmlcairo_lablgtk.a dllmlcairo_lablgtk.so : $(call cobjs,$(lablgtk_SRC))
+-	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^
++	$(OCAMLMKLIB) -o cairo_lablgtk -oc mlcairo_lablgtk $^ $(GDK_LIBS)
+ 
+ svgcairo_SRC = svg_cairo.mli svg_cairo.ml ml_svg_cairo.c
+ 
+@@ -71,7 +71,7 @@ pangocairo_SRC = pango_cairo.mli pango_c
+ pango_cairo.cma : $(call mlobjs,$(pangocairo_SRC))
+ 	$(OCAMLMKLIB) -o pango_cairo -oc mlpangocairo $^ $(LIBPANGOCAIRO_LIBS)
+ pango_cairo.cmxa : $(call mloptobjs,$(pangocairo_SRC))
+-	$(OCAMLMKLIB) -o pango_cairo -oc mlpangocairo $^ $(LIBPANGO_CAIRO_LIBS)
++	$(OCAMLMKLIB) -o pango_cairo -oc mlpangocairo $^ $(LIBPANGOCAIRO_LIBS)
+ libmlpangocairo.a dllmlpangocairo.so : $(call cobjs,$(pangocairo_SRC))
+ 	$(OCAMLMKLIB) -o pango_cairo -oc mlpangocairo $^ $(LIBPANGOCAIRO_LIBS)
+ 

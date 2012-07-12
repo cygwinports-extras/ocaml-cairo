@@ -4,6 +4,7 @@ DESCRIPTION="OCaml bindings for cairo and libsvg-cairo"
 HOMEPAGE="http://cairographics.org/cairo-ocaml"
 SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-${PV}.tar.bz2"
 SRC_DIR="cairo-ocaml-${PV}"
+PATCH_URI="1.2.0-no-undefined.patch"
 
 DIFF_EXCLUDES="aclocal.m4 configure"
 
@@ -28,5 +29,17 @@ src_install() {
 		requires = "bigarray"
 		archive(byte) = "cairo.cma"
 		archive(native) = "cairo.cmxa"
+
+		package "pango" (
+		  requires = "lablgtk2"
+		  archive(byte) = "pango_cairo.cma"
+		  archive(native) = "pango_cairo.cmxa"
+		)
+
+		package "lablgtk2" (
+		  requires = "cairo,lablgtk2"
+		  archive(byte) = "cairo_lablgtk.cma"
+		  archive(native) = "cairo_lablgtk.cmxa"
+		)
 	_EOF
 }
