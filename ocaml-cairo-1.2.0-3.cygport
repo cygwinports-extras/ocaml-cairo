@@ -17,3 +17,16 @@ src_compile() {
 	cygconf --with-gtk
 	cygmake -j1
 }
+
+src_install() {
+	cd ${B}
+	ocaml_install
+
+	cat > ${D}${OCAML_LIBDIR}/cairo/META <<-_EOF
+		version="${PV}"
+		directory="+cairo"
+		requires = "bigarray"
+		archive(byte) = "cairo.cma"
+		archive(native) = "cairo.cmxa"
+	_EOF
+}
