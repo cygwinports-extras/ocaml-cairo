@@ -1,0 +1,14 @@
+--- origsrc/cairo-ocaml-1.2.0/src/Makefile	2013-10-28 17:53:27.076927900 -0500
++++ src/cairo-ocaml-1.2.0/src/Makefile	2013-10-28 18:06:01.836097600 -0500
+@@ -92,9 +92,9 @@ install: all
+ ifdef OCAMLOPT
+ 	install -m644 *.cmxa *.a *.cmx $(DESTDIR)$(INSTALLDIR)
+ endif
+-	install -m 755 dll*.so $(DESTDIR)$(INSTALLDIR)
+ 	if test -w $(DESTDIR)$(OCAMLLIB)/stublibs ; then \
+-          for lib in dll*.so ; do \
++          for lib in `find . -name 'dll*.so'` ; do \
++            install -m 755 $$lib $(DESTDIR)$(INSTALLDIR) ; \
+             ln -s $(INSTALLDIR)/$$lib $(DESTDIR)$(OCAMLLIB)/stublibs ; done ; fi
+ 
+ DOCFILES = cairo.mli cairo_bigarray.mli cairo_png.mli cairo_pdf.mli cairo_ps.mli cairo_ft.mli

@@ -2,14 +2,17 @@ inherit ocaml
 
 NAME="ocaml-cairo"
 VERSION=1.2.0
-RELEASE=3
+RELEASE=4
 CATEGORY="Libs"
 SUMMARY="OCaml bindings for libcairo"
 DESCRIPTION="Objective Caml cairo bindings"
 HOMEPAGE="http://cairographics.org/cairo-ocaml"
 SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-${VERSION}.tar.bz2"
 SRC_DIR="cairo-ocaml-${VERSION}"
-PATCH_URI="1.2.0-no-undefined.patch"
+PATCH_URI="
+	1.2.0-no-undefined.patch
+	1.2.0-install-stublibs.patch
+"
 
 DIFF_EXCLUDES="aclocal.m4 configure"
 
