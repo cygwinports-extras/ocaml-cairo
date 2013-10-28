@@ -1,9 +1,14 @@
 inherit ocaml
 
-DESCRIPTION="OCaml bindings for cairo and libsvg-cairo"
+NAME="ocaml-cairo"
+VERSION=1.2.0
+RELEASE=3
+CATEGORY="Libs"
+SUMMARY="OCaml bindings for libcairo"
+DESCRIPTION="Objective Caml cairo bindings"
 HOMEPAGE="http://cairographics.org/cairo-ocaml"
-SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-${PV}.tar.bz2"
-SRC_DIR="cairo-ocaml-${PV}"
+SRC_URI="http://cgit.freedesktop.org/cairo-ocaml/snapshot/cairo-ocaml-${VERSION}.tar.bz2"
+SRC_DIR="cairo-ocaml-${VERSION}"
 PATCH_URI="1.2.0-no-undefined.patch"
 
 DIFF_EXCLUDES="aclocal.m4 configure"
@@ -24,7 +29,7 @@ src_install() {
 	ocaml_install
 
 	cat > ${D}${OCAML_LIBDIR}/cairo/META <<-_EOF
-		version="${PV}"
+		version="${VERSION}"
 		directory="+cairo"
 		requires = "bigarray"
 		archive(byte) = "cairo.cma"
