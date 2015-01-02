@@ -2,7 +2,7 @@ inherit ocaml
 
 NAME="ocaml-cairo"
 VERSION=1.2.0
-RELEASE=4
+RELEASE=5
 CATEGORY="Libs"
 SUMMARY="OCaml bindings for libcairo"
 DESCRIPTION="Objective Caml cairo bindings"
